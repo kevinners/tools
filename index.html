@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式网页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .nav {
+            background-color: #2196F3;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav h1 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .item-desc {
+            padding: 15px;
+        }
+
+        .item-desc h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .item-desc p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <h1>我的网站</h1>
+    </nav>
+
+    <main class="content">
+        <div class="grid">
+            <div class="item">
+                <a href="http://www.78497.com/" target="_blank">
+                    <img src="https://picsum.photos/400/300?random=1" alt="时代音乐网">
+                    <div class="item-desc">
+                        <h3>时代音乐网</h3>
+                        <p>时代音乐网-免费MP3下载,视频歌曲大全,全网MP3免费下载,网络热门歌曲</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://www.xmwav.com/" target="_blank">
+                    <img src="https://picsum.photos/400/300?random=2" alt="熊猫无损音乐网">
+                    <div class="item-desc">
+                        <h3>熊猫无损音乐网</h3>
+                        <p>熊猫无损音乐网-mp3歌曲免费下载|无损音乐分享网站</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://mp3cut.net/cn/" target="_blank">
+                    <img src="https://picsum.photos/400/300?random=3" alt="MP3 Cutter">
+                    <div class="item-desc">
+                        <h3>MP3 Cutter</h3>
+                        <p>剪辑音乐，方便之极 Online MP3 Cutter - Cut Songs, Make Ringtones</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://www.aconvert.com/image/" target="_blank">
+                    <img src="https://picsum.photos/400/300?random=4" alt="Image Converter">
+                    <div class="item-desc">
+                        <h3>Image Converter</h3>
+                        <p>Convert image online</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://greenvideo.cc/" target="_blank">
+                    <img src="https://picsum.photos/400/300?random=5" alt="GreenVideo">
+                    <div class="item-desc">
+                        <h3>GreenVideo视频下载</h3>
+                        <p>免费视频下载_哔哩哔哩B站视频下载_抖音无水印视频下载_YouTube油管视频下载-GreenVideo视频下载</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://5sing.kugou.com/index.html" target="_blank">
+                    <img src="https://picsum.photos/400/300?random=6" alt="5sing音乐">
+                    <div class="item-desc">
+                        <h3>5sing音乐</h3>
+                        <p>5sing音乐，原创，伴奏，免费伴奏，原创音乐，翻唱，网络歌曲，手机铃声，翻唱音乐，手机彩铃，网络音乐，5sing</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://online-video-cutter.com/cn/video-editor" target="_blank">
+                    <img src="https://picsum.photos/400/300?random=7" alt="在线视频编辑器">
+                    <div class="item-desc">
+                        <h3>在线视频编辑器</h3>
+                        <p>在线视频编辑器 - 简单免费的视频编辑工具</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://blog.luckly-mjw.cn/tool-show/m3u8-downloader/index.html" target="_blank">
+                    <img src="https://picsum.photos/400/300?random=8" alt="M3U8下载器">
+                    <div class="item-desc">
+                        <h3>M3U8下载器</h3>
+                        <p>m3u8 视频在线提取工具</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
